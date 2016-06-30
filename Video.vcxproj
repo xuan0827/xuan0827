@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5BC1C6A-ECD3-4899-AED8-E4EA7CF0B008}</ProjectGuid>
+    <RootNamespace>Video</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\DXSDK\Include;C:\DXSDK\Samples\C++\DirectShow\BaseClasses;$(IncludePath)</IncludePath>
+    <ReferencePath>.\DXSDK\Lib;$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\DXSDK\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\DXSDK\Include;C:\DXSDK\Samples\C++\DirectShow\BaseClasses;$(IncludePath)</IncludePath>
+    <ReferencePath>.\DXSDK\Lib;$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\DXSDK\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\DXSDK\Include;.\DXSDK\Samples\C++\DirectShow\BaseClasses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/wd4430 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\DXSDK\Lib;.\DXSDK\Samples\C++\DirectShow\BaseClasses;.\DXSDK\Samples\C++\DirectShow\BaseClasses\Release_Unicode;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Strmiids.lib;quartz.lib;strmbase.lib;Winmm.lib;vfw32.lib;./CxImage/png.lib;./CxImage/jpeg.lib;./CxImage/zlib.lib;./CxImage/tiff.lib;./CxImage/j2k.lib;./CxImage/jbig.lib;./CxImage/jasper.lib;./CxImage/cximage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /SECTION:.rsrc,rw %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0404</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Strmiids.lib;quartz.lib;strmbase.lib;Winmm.lib;vfw32.lib;./CxImage/png.lib;./CxImage/jpeg.lib;./CxImage/zlib.lib;./CxImage/tiff.lib;./CxImage/j2k.lib;./CxImage/jbig.lib;./CxImage/jasper.lib;./CxImage/cximage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\DXSDK\Lib;C:\DXSDK\Samples\C++\DirectShow\BaseClasses\Release_Unicode;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkErrorReporting>QueueForNextLogin</LinkErrorReporting>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /SECTION:.rsrc,rw /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0404</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Video.ico" />
+    <None Include="res\Video.rc2" />
+    <None Include="res\VideoDoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdaboostDetection.h" />
+    <ClInclude Include="adaboost\cv.h" />
+    <ClInclude Include="adaboost\cv.hpp" />
+    <ClInclude Include="adaboost\cvtypes.h" />
+    <ClInclude Include="adaboost\cxcore.hpp" />
+    <ClInclude Include="adaboost\cxerror.h" />
+    <ClInclude Include="adaboost\cxmisc.h" />
+    <ClInclude Include="adaboost\cxtypes.h" />
+    <ClInclude Include="adaboost\mmplab_cv.h" />
+    <ClInclude Include="adaboost\mmplab_cxcore.h" />
+    <ClInclude Include="adaboost\mmplab_grfmt.h" />
+    <ClInclude Include="adaboost\mmplab_highgui.h" />
+    <ClInclude Include="adaboost\utils.h" />
+    <ClInclude Include="GraphBase.h" />
+    <ClInclude Include="ImgProcess.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MsgBar.h" />
+    <ClInclude Include="N_BoxFilter.h" />
+    <ClInclude Include="N_Image.h" />
+    <ClInclude Include="N_KeyPoint.h" />
+    <ClInclude Include="N_KeyPointDescriptor.h" />
+    <ClInclude Include="N_KeyPointDescriptorContext.h" />
+    <ClInclude Include="N_KeyPointDetector.h" />
+    <ClInclude Include="N_MathStuff.h" />
+    <ClInclude Include="N_SimpleGrayImage.h" />
+    <ClInclude Include="N_WaveFilter.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Retangle.h" />
+    <ClInclude Include="RogerFunction.h" />
+    <ClInclude Include="scbarg.h" />
+    <ClInclude Include="sizecbar.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="svm.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Video.h" />
+    <ClInclude Include="VideoDoc.h" />
+    <ClInclude Include="VideoView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdaboostDetection.cpp" />
+    <ClCompile Include="adaboost\mmplab_bitstrm.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cum.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore_cmp.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore_matrix.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore_norm.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore_persistence.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_cxcore_utils.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_drawing.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_grfmt.cpp" />
+    <ClCompile Include="adaboost\mmplab_cv_haar.cpp" />
+    <ClCompile Include="adaboost\mmplab_highgui.cpp" />
+    <ClCompile Include="adaboost\window_w32.cpp" />
+    <ClCompile Include="GraphBase.cpp" />
+    <ClCompile Include="ImgProcess.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MsgBar.cpp" />
+    <ClCompile Include="N_Image.cpp" />
+    <ClCompile Include="N_KeyPointDescriptor.cpp" />
+    <ClCompile Include="N_KeyPointDetector.cpp" />
+    <ClCompile Include="N_MathStuff.cpp" />
+    <ClCompile Include="N_SimpleGrayImage.cpp" />
+    <ClCompile Include="Retangle.cpp" />
+    <ClCompile Include="RogerFunction.cpp" />
+    <ClCompile Include="scbarg.cpp" />
+    <ClCompile Include="sizecbar.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="svm.cpp" />
+    <ClCompile Include="Video.cpp" />
+    <ClCompile Include="VideoDoc.cpp" />
+    <ClCompile Include="VideoView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Video.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Video.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
